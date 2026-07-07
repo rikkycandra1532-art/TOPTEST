@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TopMarket — Belanja Kebutuhan Harian Kota Anda</title>
+  <meta name="description" content="TopMarket adalah marketplace lokal untuk kebutuhan harian: sembako, buah & sayur, daging & ikan, minuman, hingga kebutuhan rumah tangga. Segar, lengkap, dan cepat sampai.">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+
+  <header class="site-header" id="headerPlaceholder"></header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <span class="hero-badge">🛒 Marketplace Lokal Kota Anda</span>
+        <h1>Belanja Kebutuhan Harian, Segar & Cepat Sampai</h1>
+        <p>Sembako, buah segar, daging, hingga kebutuhan rumah tangga — semua ada di satu tempat dengan harga bersahabat.</p>
+        <div class="hero-actions">
+          <form class="hero-search" data-search-form>
+            <input type="search" placeholder="Cari beras, minyak, susu, dll..." aria-label="Cari produk">
+            <button type="submit" class="btn btn-primary">Cari</button>
+          </form>
+          <a href="produk.html" class="btn btn-dark">Belanja Sekarang</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kategori Populer -->
+    <section class="container">
+      <div class="category-scroll" id="categoryChips"></div>
+    </section>
+
+    <!-- Produk Terbaru -->
+    <section class="section container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Baru Saja Hadir</span>
+          <h2>Produk Terbaru</h2>
+        </div>
+        <a class="link-more" href="produk.html">Lihat Semua →</a>
+      </div>
+      <div class="grid-products" id="latestProducts"></div>
+    </section>
+
+    <!-- Produk Terlaris -->
+    <section class="section container" style="padding-top:0">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Favorit Pelanggan</span>
+          <h2>Produk Terlaris</h2>
+        </div>
+        <a class="link-more" href="produk.html">Lihat Semua →</a>
+      </div>
+      <div class="grid-products" id="bestSellerProducts"></div>
+    </section>
+
+    <!-- Promo Hari Ini -->
+    <section class="section" style="background:var(--color-gray-50)">
+      <div class="container">
+        <div class="promo-banner">
+          <span class="badge badge-new">Promo Hari Ini</span>
+          <h3>Diskon hingga 20% untuk produk pilihan</h3>
+          <p>Belanja sekarang sebelum promo berakhir hari ini.</p>
+        </div>
+        <div class="grid-products mt-32" id="promoProducts"></div>
+      </div>
+    </section>
+
+    <!-- Brand Pilihan -->
+    <section class="section container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Terpercaya</span>
+          <h2>Brand Pilihan</h2>
+        </div>
+      </div>
+      <div class="brand-row" id="brandRow"></div>
+    </section>
+
+    <!-- Keunggulan -->
+    <section class="section container" style="padding-top:0">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Kenapa TopMarket</span>
+          <h2>Keunggulan Marketplace Kami</h2>
+        </div>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-card__icon">🚚</div>
+          <h4>Pengiriman Cepat</h4>
+          <p>Pesanan sampai di hari yang sama untuk area dalam kota.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">✅</div>
+          <h4>Produk Berkualitas</h4>
+          <p>Setiap produk dipilih dan dicek kualitasnya sebelum dikirim.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">💰</div>
+          <h4>Harga Bersahabat</h4>
+          <p>Harga kompetitif dengan promo menarik setiap hari.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-card__icon">🔒</div>
+          <h4>Pembayaran Aman</h4>
+          <p>Transaksi terlindungi lewat QRIS, transfer, atau tunai.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="footerPlaceholder"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak — TopMarket</title>
+  <meta name="description" content="Hubungi tim TopMarket untuk pertanyaan seputar pesanan, produk, maupun kerja sama.">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="kontak">
+
+  <header class="site-header" id="headerPlaceholder"></header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>Hubungi Kami</h1>
+        <p>Ada pertanyaan seputar pesanan atau produk? Tim TopMarket siap membantu.</p>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="contact-layout">
+        <div>
+          <div class="contact-info-card">
+            <div class="contact-info-card__icon">📍</div>
+            <div><h4>Alamat</h4><p class="text-muted">Jl. Merdeka No. 88, Kota Anda</p></div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-card__icon">📞</div>
+            <div><h4>Telepon / WhatsApp</h4><p class="text-muted">+62 812-3456-7890</p></div>
+          </div>
+          <div class="contact-info-card">
+            <div class="contact-info-card__icon">✉️</div>
+            <div><h4>Email</h4><p class="text-muted">halo@topmarket.id</p></div>
+          </div>
+          <div class="contact-info-card" style="border-bottom:none;">
+            <div class="contact-info-card__icon">🕒</div>
+            <div><h4>Jam Operasional</h4><p class="text-muted">Setiap hari, 07.00 – 21.00 WIB</p></div>
+          </div>
+
+          <iframe class="map-frame mt-24" src="https://www.google.com/maps?q=Jl.+Merdeka&output=embed" loading="lazy" title="Lokasi TopMarket"></iframe>
+        </div>
+
+        <div>
+          <h4>Kirim Pesan</h4>
+          <form id="contactForm" class="mt-16">
+            <div class="form-group">
+              <label for="contactName">Nama</label>
+              <input type="text" id="contactName" required placeholder="Nama Anda">
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">Email</label>
+              <input type="email" id="contactEmail" required placeholder="email@contoh.com">
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Pesan</label>
+              <textarea id="contactMessage" required placeholder="Tulis pesan Anda di sini..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Kirim Pesan</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="footerPlaceholder"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

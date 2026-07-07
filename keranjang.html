@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keranjang Belanja — TopMarket</title>
+  <meta name="description" content="Tinjau produk di keranjang belanja Anda sebelum checkout di TopMarket.">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="keranjang">
+
+  <header class="site-header" id="headerPlaceholder"></header>
+
+  <main class="container">
+    <nav class="breadcrumb"><a href="index.html">Home</a> / <span class="current">Keranjang</span></nav>
+
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Belanja Anda</span>
+        <h2>Keranjang Belanja</h2>
+      </div>
+    </div>
+
+    <div id="cartEmpty" class="empty-state" style="display:none">
+      <div class="empty-icon">🛒</div>
+      <p>Keranjang Anda masih kosong.</p>
+      <a href="produk.html" class="btn btn-primary mt-16">Mulai Belanja</a>
+    </div>
+
+    <div id="cartContent" class="cart-layout">
+      <div id="cartList"></div>
+      <aside class="summary-card">
+        <h4>Ringkasan Belanja</h4>
+        <div id="cartSummaryBody"></div>
+        <a href="checkout.html" class="btn btn-primary btn-block mt-16">Checkout</a>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer mt-32" id="footerPlaceholder"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

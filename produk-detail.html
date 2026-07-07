@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detail Produk — TopMarket</title>
+  <meta name="description" content="Lihat detail produk, harga, rating, dan stok sebelum menambahkannya ke keranjang belanja TopMarket.">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="produk-detail">
+
+  <header class="site-header" id="headerPlaceholder"></header>
+
+  <main class="container">
+    <nav class="breadcrumb"><a href="index.html">Home</a> / <a href="produk.html">Semua Produk</a> / <span class="current">Detail Produk</span></nav>
+
+    <div id="productDetailWrap" class="fade-in"></div>
+
+    <section class="section" style="padding-top:24px">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">Mungkin Anda Suka</span>
+          <h2>Produk Terkait</h2>
+        </div>
+      </div>
+      <div class="grid-products" id="relatedProducts"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer mt-32" id="footerPlaceholder"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

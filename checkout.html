@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout — TopMarket</title>
+  <meta name="description" content="Selesaikan pesanan Anda di TopMarket dengan pengisian data yang cepat dan mudah.">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="checkout">
+
+  <header class="site-header" id="headerPlaceholder"></header>
+
+  <main class="container">
+    <nav class="breadcrumb"><a href="index.html">Home</a> / <a href="keranjang.html">Keranjang</a> / <span class="current">Checkout</span></nav>
+
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Selesaikan Pesanan</span>
+        <h2>Checkout</h2>
+      </div>
+    </div>
+
+    <div id="checkoutEmpty" class="empty-state" style="display:none">
+      <div class="empty-icon">🧾</div>
+      <p>Keranjang Anda kosong, tidak ada yang bisa di-checkout.</p>
+      <a href="produk.html" class="btn btn-primary mt-16">Mulai Belanja</a>
+    </div>
+
+    <div id="checkoutSuccess" class="empty-state" style="display:none">
+      <div class="empty-icon">✅</div>
+      <h3>Pesanan Berhasil Dibuat!</h3>
+      <p class="mt-8">Nomor pesanan Anda: <strong id="orderNumber"></strong></p>
+      <p class="text-muted mt-8">Tim kami akan segera memproses pesanan Anda.</p>
+      <a href="index.html" class="btn btn-primary mt-16">Kembali ke Beranda</a>
+    </div>
+
+    <div class="cart-layout">
+      <form id="checkoutForm" novalidate>
+        <div class="form-group">
+          <label for="custName">Nama Lengkap</label>
+          <input type="text" id="custName" required placeholder="Nama Anda">
+        </div>
+
+        <div class="form-group">
+          <label for="custPhone">Nomor HP</label>
+          <input type="tel" id="custPhone" required placeholder="08xxxxxxxxxx">
+        </div>
+
+        <div class="form-group">
+          <label>Metode Pengambilan</label>
+          <div class="option-cards">
+            <label class="option-card">
+              <input type="radio" name="delivery" value="delivery" checked> 🚚 Delivery
+            </label>
+            <label class="option-card">
+              <input type="radio" name="delivery" value="pickup"> 🏬 Pickup
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group" id="addressGroup">
+          <label for="custAddress">Alamat Pengiriman</label>
+          <textarea id="custAddress" placeholder="Jl. ..., RT/RW, Kelurahan, Kecamatan"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="custNote">Catatan (opsional)</label>
+          <textarea id="custNote" placeholder="Catatan untuk kurir / penjual"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Metode Pembayaran</label>
+          <div class="payment-list">
+            <label class="option-card"><input type="radio" name="payment" value="qris" checked> 📱 QRIS</label>
+            <label class="option-card"><input type="radio" name="payment" value="transfer"> 🏦 Transfer Bank</label>
+            <label class="option-card"><input type="radio" name="payment" value="cash"> 💵 Cash saat diterima</label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Pesan Sekarang</button>
+      </form>
+
+      <aside class="summary-card" id="checkoutSummaryCard">
+        <h4>Ringkasan Pesanan</h4>
+        <div id="checkoutSummary"></div>
+        <div class="summary-row total"><span>Total</span><span id="checkoutTotal"></span></div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer mt-32" id="footerPlaceholder"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

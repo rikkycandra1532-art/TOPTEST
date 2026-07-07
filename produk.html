@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semua Produk — TopMarket</title>
+  <meta name="description" content="Jelajahi semua produk kebutuhan harian di TopMarket: sembako, buah & sayur, daging & ikan, minuman, snack, dan lainnya.">
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="produk">
+
+  <header class="site-header" id="headerPlaceholder"></header>
+
+  <main class="container">
+    <nav class="breadcrumb"><a href="index.html">Home</a> / <span class="current">Semua Produk</span></nav>
+
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Katalog</span>
+        <h2>Semua Produk</h2>
+      </div>
+    </div>
+
+    <div class="products-layout">
+      <aside class="filter-panel">
+        <h4>Kategori</h4>
+        <div class="filter-group" id="categoryFilters"></div>
+      </aside>
+
+      <div>
+        <div class="toolbar">
+          <span id="produkCount" class="text-muted"></span>
+          <div style="display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+            <input type="search" id="produkSearchInput" placeholder="Cari produk..." style="padding:9px 14px;border:1px solid var(--color-gray-200);border-radius:999px;font-size:.85rem;min-width:180px;">
+            <select id="sortSelect" aria-label="Urutkan">
+              <option value="terbaru">Terbaru</option>
+              <option value="termurah">Harga Terendah</option>
+              <option value="termahal">Harga Tertinggi</option>
+              <option value="rating">Rating Tertinggi</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid-products" id="produkGrid"></div>
+
+        <div class="text-center mt-32">
+          <button class="btn btn-outline" id="loadMoreBtn" style="display:none">Muat Lebih Banyak</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer mt-32" id="footerPlaceholder"></footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
